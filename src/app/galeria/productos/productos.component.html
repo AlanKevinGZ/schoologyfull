@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light bg-light justify-content-between container">
+    <a class="navbar-brand"  (click)="menu()">Menu</a>
+    
+<nav *ngIf="bandera" class="menu">
+    
+    <a [routerLink]="['/productos']">Incio</a>
+    <a>menu</a>
+    <a>productos</a>
+    <a>lista</a>
+    <a [routerLink]="['/prueba']">Guardar</a>
+  </nav>
+      <input type="text" [(ngModel)]="product" (input)="busqueda(product)" placeholder="Buscar">
+  </nav>
+
+
+
+<div class="container">
+    <div class="col_productos">
+        <div class="card" *ngFor="let item of arrProducto">
+            <img [src]=" item.imagen " alt="">
+            <h3> {{item.nombre}} </h3>
+            <p> ${{item.precio}} </p>
+            <a (click)="onClick(item.id)" class="btn">Ver Producto</a>
+        </div>
+    </div>
+</div>
+
+
+

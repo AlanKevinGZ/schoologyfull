@@ -1,0 +1,56 @@
+<form class="container mt-5"  [formGroup]="formulario">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">ID</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID" formControlName="id">
+
+    <div class="error" *ngIf="formulario.controls['id'].errors?.['required']  && formulario.controls['id'].touched">
+      <p>*El campo ID es obligatorio</p>
+    </div>
+
+  </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="nombre">
+
+      <div class="error" *ngIf="formulario.controls['nombre'].errors?.['required']  && formulario.controls['nombre'].touched">
+        <p>*El campo nombre es obligatorio</p>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">precio</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter precio" formControlName="precio">
+
+      <div class="error" *ngIf="formulario.controls['precio'].errors?.['required']  && formulario.controls['precio'].touched">
+        <p>*El campo precio es obligatorio</p>
+      </div>
+
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">img</label>
+      <input type="file" formControlName="imagen">
+    </div>
+
+    
+    <!-- eliminar -->
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  formControlName="password">
+    </div>
+
+    <div class="error" *ngIf="formulario.controls['password'].errors?.['required']  && formulario.controls['password'].touched">
+        <p>*El campo password es obligatorio</p>
+    </div>
+    <!-- Eliminar -->
+    
+    <button type="submit" class="btn btn-primary"  (click)="guardar()" [disabled]="formulario.valid">Guardar Producto</button>
+  </form>
+
+  
+ 

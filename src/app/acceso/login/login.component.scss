@@ -1,0 +1,47 @@
+
+.col_formulario{
+    height: 34rem;
+    display: flex;
+    align-items: center;
+}
+
+   .form{
+       background-color:white;
+       padding: 2rem;
+       width: 35%;
+       margin: 1rem auto;
+
+       h3{
+           font-size: 1.4rem;
+       }
+       span{
+           font-size: .9rem;
+           color: #b1afaf;
+       }
+      
+   }
+
+   form{
+    margin-top: 1rem ;
+    input[type="text"], input[type="password"]{
+        padding:.5rem;
+        margin: .3rem 0px;
+        width: 100%;
+    } 
+   }
+
+
+
+
+.option{
+margin-top: 1rem;
+display: flex;
+justify-content: space-between;
+
+a{
+    display: block;
+    text-decoration: none;
+}
+}
+
+

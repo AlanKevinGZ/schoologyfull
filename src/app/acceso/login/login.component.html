@@ -1,0 +1,34 @@
+
+<app-navbar></app-navbar>
+
+<div class="col_formulario">
+    <div class="container">
+        <div class="form">
+            <h3>Sign in to Schoology</h3>
+            <span> All fields are required </span>
+            <form action="" (submit)="enviar($event)">
+               <div class="user">
+                 <input type="text" placeholder="Email or Username" [(ngModel)]="usuario" name="user" >
+               </div>
+                <div class="contras">
+                    <input type="password" placeholder="Password" name="password" [(ngModel)]="password">
+                </div>
+                <div class="option">
+                    <div class="button">
+                        <input type="submit" value="Log in" 
+                        class="btn btn-primary">
+                    </div>
+                    <div class="enlaces">
+                        <a href="/recovery">Forgot your password</a>
+                        <a href="/registro">Create Account</a>
+                    </div>
+                </div>
+                <p *ngIf="erro" class="alert alert-danger">{{msjError
+                     | uppercase}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
